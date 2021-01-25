@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Google Maps JavaScript API with Places Library Autocomplete Address Field</title> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />   -->
 																													
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>   -->
 																						   
 										 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -52,11 +52,20 @@
 </head>
 
 <body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="test.html">Test</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
             <p><h1>Google Maps JavaScript API with Places Library Autocomplete Address Field</h1></p>
-   <!-- Autocomplete location search input --> 
+    Autocomplete location search input --> 
    <div class="form-group">
     <label>Location:</label>
     <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
@@ -67,7 +76,7 @@
    </div>
 
 </div>
-<script>
+ <script>
 var searchInput = 'search_input';
  
 $(document).ready(function () {
@@ -82,13 +91,8 @@ $(document).ready(function () {
  google.maps.event.addListener(autocomplete, 'place_changed', function () {
   var near_place = autocomplete.getPlace();
  });
-});
-			 
-
-																									  
-</script>
-		   
-																																																										   
+});																									  
+</script> 																																															   
 				 
 </body>
 
