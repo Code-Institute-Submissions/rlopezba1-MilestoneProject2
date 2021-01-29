@@ -4,96 +4,40 @@
 <head> 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Maps JavaScript API with Places Library Autocomplete Address Field</title> 
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />   -->
-																													
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>   -->
-																						   
-										 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Google Maps JavaScript library -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyALGFO5gmDYd5ahZgFJdeof8dJvdIlbTy8"></script>
- 
-<style>
-#search_input {font-size:18px;}
-.form-group{
- margin-bottom: 10px;margin-top:50px;
-						 
-}
-.form-group label{
- font-size:18px;
- font-weight: 600;
-}
+<title>Cards</title> 
 
-.form-group input{
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.form-group input:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-</style>
+    <link href="style.css" rel="stylesheet">
+	<script src="Scripts/jquery-2.1.0.min.js"></script>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
 
-
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <p class="dark" onclick="card[0]">A</p><p class="dark">B</p><p class="dark">C</p><p class="dark">D</p>
+        </div>
+        <div class="row">
+            <p class="dark">E</p><p class="dark">F</p><p class="dark">G</p><p class="dark">H</p>
+        </div>
+        <div class="row">   
+            <p class="dark">I</p><p class="dark">J</p><p class="dark">K</p><p class="dark">L</p>
+        </div>
+        <div class="row">
+            <p class="dark">M</p><p class="dark">N</p><p class="dark">O</p><p class="dark">P</p>
+        </div>
 
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="test.html">Test</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a class="active" href="#about">About</a></li>
-</ul>
+
+        <div id="demo">
+        </div>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <p><h1>Google Maps JavaScript API with Places Library Autocomplete Address Field</h1></p>
-    Autocomplete location search input --> 
-   <div class="form-group">
-    <label>Location:</label>
-    <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
-   </div>
-
-											 
-     </div>
-   </div>
-
-</div>
- <script>
-var searchInput = 'search_input';
- 
-$(document).ready(function () {
- var autocomplete;
- autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-  types: ['geocode'],
-  /*componentRestrictions: {
-   country: "USA"
-  }*/
- });
-  
- google.maps.event.addListener(autocomplete, 'place_changed', function () {
-  var near_place = autocomplete.getPlace();
- });
-});																									  
-</script> 																																															   
-				 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
