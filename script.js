@@ -16,8 +16,7 @@ cards[12] = '<img src="img/darthVader.jpg">'
 cards[13] = '<img src="img/darthVader.jpg">'
 cards[14] = '<img src="img/swords.jpg">'
 cards[15] = '<img src="img/swords.jpg">'
-cards[16] = '<img src="img/r2d2.jpg">'
-cards[17] = '<img src="img/r2d2.jpg">'
+
 
 // https://javascript.info/array-methods
 
@@ -77,12 +76,3 @@ element14.innerHTML = cards[14];
 
 var element15 = document.getElementById("16");
 element15.innerHTML = cards[15];
-
-var element16 = document.getElementById("17");
-element16.innerHTML = cards[16];
-
-var element17 = document.getElementById("18");
-element17.innerHTML = cards[17];
-
-
-
