@@ -27,8 +27,6 @@ function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
 
-//document.getElementById("demo").innerHTML = cards;
-
 var element0 = document.getElementById("1");
 element0.innerHTML = cards[0];
 
