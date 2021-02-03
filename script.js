@@ -1,3 +1,36 @@
+$(document).ready(function(){
+
+
+
+
+
+  // jQuery methods go here...
+  $("button").click(function(){
+    $(".col-3").addClass("darkSide");
+  });
+
+
+  $(".col-3").click(function(){
+       $(this).removeClass("darkSide");
+       let first = $(this);
+
+   $(".col-3").click(function(){
+     $(this).removeClass("darkSide");
+         let second = this;
+            if (first != second){
+                first.addClass("darkSide");
+                second.addClass("darkSide");
+            }else{
+                 first.removeClass("darkSide");
+                 second.removeClass("darkSide");
+            }        
+ 
+});
+});
+
+
+});
+
 let cards = new Array();
 
 cards[0] = '<img src="img/deathStar.jpg"> ';
@@ -18,7 +51,7 @@ cards[14] = '<img src="img/swords.jpg">'
 cards[15] = '<img src="img/swords.jpg">'
 
 
-// https://javascript.info/array-methods
+// https://javascript.info
 
 shuffle(cards);
 //console.log(cards);
@@ -74,3 +107,4 @@ element14.innerHTML = cards[14];
 
 var element15 = document.getElementById("16");
 element15.innerHTML = cards[15];
+
