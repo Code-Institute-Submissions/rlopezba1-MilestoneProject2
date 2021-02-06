@@ -8,7 +8,7 @@ function flipCard() {
     if(lockBoard) return;
     if(this === firstCard) return;
 
-    this.classList.toggle('flip');
+    this.classList.add('flip');
 
     if(!hasFlippedCard) {
         // first click
@@ -18,7 +18,7 @@ function flipCard() {
         return;
     }
         // second click
-        
+        hasFlippedCard = false;
         secondCard = this;
 
        checkForMatch();
@@ -28,7 +28,7 @@ function flipCard() {
 
 function checkForMatch(){
      // do cards match?
-     let isMatch = firstCard.dataset.starWars === secondCard.dataset.starWars;
+     let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;
 
      isMatch ? disableCards() : unFlipCards();
         
