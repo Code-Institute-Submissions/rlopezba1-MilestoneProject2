@@ -5,83 +5,94 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars Memory Game</title>
-
-   <link rel="stylesheet" href="style.css">
-
-
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <!-- The game has 12 cards and each card consists of a container div named .memory-card, which holds two img elements.
+    The first one represents the card front-face and the second its back-face. The set of cards will be wrapped in a section container element -->
+
     <section class="memory-game">
         <div class="memory-card" data-starwars="camel">
-            <img class="front-face"  src="img/camel.jpg" alt="camel">
+            <img class="front-face" src="img/camel.jpg" alt="camel">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                        
+
         </div>
-        <div class="memory-card"  data-starwars="camel">
-            <img class="front-face"  src="img/camel.jpg" alt="camel">
-            <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-        </div>
-        <div class="memory-card"  data-starwars="darthVader">
-            <img class="front-face"  src="img/darthVader.jpg" alt="darthVader">
+        <div class="memory-card" data-starwars="camel">
+            <img class="front-face" src="img/camel.jpg" alt="camel">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="darthVader">
-            <img class="front-face"  src="img/darthVader.jpg" alt="darthVader">
+        <div class="memory-card" data-starwars="darthVader">
+            <img class="front-face" src="img/darthVader.jpg" alt="darthVader">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="deathStar">
-            <img class="front-face"  src="img/deathStar.jpg" alt="deathStar">
+        <div class="memory-card" data-starwars="darthVader">
+            <img class="front-face" src="img/darthVader.jpg" alt="darthVader">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="deathStar">
-            <img class="front-face"  src="img/deathStar.jpg" alt="deathStar">
+        <div class="memory-card" data-starwars="deathStar">
+            <img class="front-face" src="img/deathStar.jpg" alt="deathStar">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="fighter">
-            <img class="front-face"  src="img/fighter.jpg" alt="fighter">
+        <div class="memory-card" data-starwars="deathStar">
+            <img class="front-face" src="img/deathStar.jpg" alt="deathStar">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="fighter">
-            <img class="front-face"  src="img/fighter.jpg" alt="fighter">
+        <div class="memory-card" data-starwars="fighter">
+            <img class="front-face" src="img/fighter.jpg" alt="fighter">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="millenium-falcon">
-            <img class="front-face"  src="img/millenium-falcon.jpg" alt="millenium-falcon">
+        <div class="memory-card" data-starwars="fighter">
+            <img class="front-face" src="img/fighter.jpg" alt="fighter">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="millenium-falcon">
-            <img class="front-face"  src="img/millenium-falcon.jpg" alt="millenium-falcon">
+        <div class="memory-card" data-starwars="millenium-falcon">
+            <img class="front-face" src="img/millenium-falcon.jpg" alt="millenium-falcon">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="r2d2">
-             <img class="front-face"  src="img/r2d2.jpg" alt="r2d2">
-             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-        </div>
-        <div class="memory-card"  data-starwars="r2d2">
-             <img class="front-face"  src="img/r2d2.jpg" alt="r2d2">
-             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-        </div>
-        <div class="memory-card"  data-starwars="spaceship">
-              <img class="front-face"  src="img/spaceship.jpg" alt="spaceship">
-              <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-        </div>
-        <div class="memory-card"  data-starwars="spaceship">
-            <img class="front-face"  src="img/spaceship.jpg" alt="spaceship">
+        <div class="memory-card" data-starwars="millenium-falcon">
+            <img class="front-face" src="img/millenium-falcon.jpg" alt="millenium-falcon">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="stormtrooper">
-            <img class="front-face"  src="img/stormtrooper.jpg" alt="stormtrooper">
+        <div class="memory-card" data-starwars="r2d2">
+            <img class="front-face" src="img/r2d2.jpg" alt="r2d2">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
-        <div class="memory-card"  data-starwars="stormtrooper">
-            <img class="front-face"  src="img/stormtrooper.jpg" alt="stormtrooper">
+        <div class="memory-card" data-starwars="r2d2">
+            <img class="front-face" src="img/r2d2.jpg" alt="r2d2">
+            <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+        </div>
+        <div class="memory-card" data-starwars="spaceship">
+            <img class="front-face" src="img/spaceship.jpg" alt="spaceship">
+            <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+        </div>
+        <div class="memory-card" data-starwars="spaceship">
+            <img class="front-face" src="img/spaceship.jpg" alt="spaceship">
+            <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+        </div>
+        <div class="memory-card" data-starwars="stormtrooper">
+            <img class="front-face" src="img/stormtrooper.jpg" alt="stormtrooper">
+            <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+        </div>
+        <div class="memory-card" data-starwars="stormtrooper">
+            <img class="front-face" src="img/stormtrooper.jpg" alt="stormtrooper">
             <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
         </div>
 
 
     </section>
-    
+    <footer>
+        <div></div>
+    </footer>
+
     <script src="script.js"></script>
 
 </body>

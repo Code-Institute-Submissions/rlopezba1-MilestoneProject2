@@ -1,40 +1,52 @@
+// To flip the card when clicked, a class flip will be added to the element.
+// all memory - card elements with document.querySelectorAll, 
+
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+
 function flipCard() {
-    if(lockBoard) return;
-    if(this === firstCard) return;
+
+//  declaring a lockBoard variable: When the player clicks the second card, 
+//  lockBoard will be set to true and the condition if (lockBoard) return;
+//   will prevent any card flipping before the cards are hidden or match
+    if (lockBoard) return;
+
+// the player can click twice on the same card. The matching condition would evaluate to true, removing the event listener from that card.
+// To prevent, it check if the current clicked card is equal to the firstCard and return if positive.
+
+    if (this === firstCard) return;
 
     this.classList.add('flip');
 
-    if(!hasFlippedCard) {
+    if (!hasFlippedCard) {
         // first click
         hasFlippedCard = true;
         firstCard = this;
-    
+
         return;
     }
-        // second click
-        hasFlippedCard = false;
-        secondCard = this;
+    // second click
+    hasFlippedCard = false;
+    secondCard = this;
 
-       checkForMatch();
-    
+    checkForMatch();
+
 }
 
 
-function checkForMatch(){
-     // do cards match?
-     let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;
+function checkForMatch() {
+    // do cards match?
+    let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;
 
-     isMatch ? disableCards() : unFlipCards();
-        
+    isMatch ? disableCards() : unFlipCards();
+
 }
 
-function disableCards(){
+function disableCards() {
     // it's a match!!
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -42,22 +54,30 @@ function disableCards(){
     resetBoard();
 }
 
-function unFlipCards(){
+function unFlipCards() {
     lockBoard = true;
 
     // not a match!!
     setTimeout(() => {
-                firstCard.classList.remove('flip');
-                secondCard.classList.remove('flip');
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
 
-                resetBoard();
-            }, 1500);
+        resetBoard();
+    }, 1500);
 }
 
-function resetBoard(){
+
+// The firstCard and secondCard variables need to be reset after each round.
+// place the hasFlippedCard = false; and lockBoard = false. The es6 destructuring assignment [var1, var2] = ['value1', 'value2']
+
+function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
+
+
+// There is 12 cards in the game, it will iterate through them, generate a random number between 0 and 11 and assign it to the flex-item order property.
+// to invoke the shuffle function, by  the Immediately Invoked Function Expression (IIFE), which means it will execute itself right after its declaration
 
 (function shuffle() {
     cards.forEach(card => {
