@@ -13,14 +13,6 @@ body{
     background-color: #060ab2;
 }
 
-.titol {
-    
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
 /* By setting display: flex to the body and margin: auto to the .memory-game container, it will be centered both vertically and horizontally.
 .memory-game will also be a flex-container. By default, the items are set to shrink in width to fit the container.
  By setting flex-wrap to wrap, flex-items wrap along multiple lines, accordingly to their size. */
@@ -85,11 +77,15 @@ In order to position .memory-card children, I added position: relative so I can 
     transform: rotateY(180deg);
 }
 
-
-
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) { 
-    
+   
+    .memory-card {
+     width: calc(25% - 10px);
+     height: calc(20% - 10px);
+     /* margin-top: 40px; */
+ }
+   
 }
 
 /* Medium devices (tablets, 768px and up) */
