@@ -77,6 +77,26 @@ In order to position .memory-card children, I added position: relative so I can 
     transform: rotateY(180deg);
 }
 
+
+
+.info-game {
+    width: 340px;
+    height: 240px;    
+    flex: left; 
+    background-color: lawngreen;
+    border: 3px solid green;
+    
+}
+
+.info-players{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    text-align: center;
+  
+    /* position: relative;    */
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) { 
    
