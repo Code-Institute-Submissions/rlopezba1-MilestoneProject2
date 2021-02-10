@@ -15,120 +15,194 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- The game has 12 cards and each card consists of a container div named .memory-card, which holds two img elements.
     The first one represents the card front-face and the second its back-face. The set of cards will be wrapped in a section container element -->
     <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
+
+
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title">The purpose of this memory game:</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
+
+                <!-- Modal body -->
                 <div class="modal-body">
-                    ...
+                    The purpose of this memory game is to memorize the locations of the cards in the game and to make
+                    pairs of cards by turning them over 2 by 2. When the 2 cards match, it's a pair! You win the pair
+                    and have the right to play again, otherwise the cards are automatically turned face down and you
+                    have to make a new try.
                 </div>
+
+                <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
-                </div>
+
             </div>
         </div>
-    <div class="container">   
-        <div class="row"> 
-            <div class="col">
-                <section class="info-game">
-                    <div class="info-players btn-group-sm" role="group" aria-label="Basic example">
+    </div>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Star Wars Memory Game</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-5">
+                <li class="nav-item mr-3">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Game Info
+                    </button>
+                </li>
+                <br>
+                <li class="nav-item mr-3">
+                    <button type="button" class="btn btn-outline-success" onclick="myFunction()">Light/ Dark mode</button>
+                </li>
+                <br>
+                <li class="nav-item mr-3">
+                    <button type="button" class="btn btn-outline-warning" value="Reload Page" onClick="window.location.reload();">Restart Game</button>
+                </li>
+                <br>
+                <li class="nav-item mr-3">
+                    <button onclick="play()" type="button" class="btn btn-outline-light">Play Music</button>
+                </li>
+                <br>
+                <li class="nav-item">
+                    <button onclick="pause()" type="button" class="btn btn-outline-light">Pause Music</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
-                        </button>
-                                                
-                            <button type="button" class="btn btn-outline-primary">Move</button>
-                            <button type="button" class="btn btn-outline-secondary">Timer</button>
-                            <button type="button" class="btn btn-outline-success">Light Theme</button>
-                            <button type="button" class="btn btn-outline-danger">Dark Theme</button>
-                            <button type="button" class="btn btn-outline-warning">Restart</button>
-                            <button type="button" class="btn btn-outline-info">Info</button>
-                            <button type="button" class="btn btn-outline-light">Mute Music</button>  
-                                        
-                        </div>
-                </section>
-            </div>
-            <div class="col">
-                <section class="memory-game">
-                    <div class="memory-card" data-starwars="camel">
-                        <img class="front-face" src="img/camel.jpg" alt="camel">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="camel">
-                        <img class="front-face" src="img/camel.jpg" alt="camel">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="darthVader">
-                        <img class="front-face" src="img/darthVader.jpg" alt="darthVader">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="darthVader">
-                        <img class="front-face" src="img/darthVader.jpg" alt="darthVader">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="deathStar">
-                        <img class="front-face" src="img/deathStar.jpg" alt="deathStar">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="deathStar">
-                        <img class="front-face" src="img/deathStar.jpg" alt="deathStar">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="fighter">
-                        <img class="front-face" src="img/fighter.jpg" alt="fighter">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="fighter">
-                        <img class="front-face" src="img/fighter.jpg" alt="fighter">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="millenium-falcon">
-                        <img class="front-face" src="img/millenium-falcon.jpg" alt="millenium-falcon">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="millenium-falcon">
-                        <img class="front-face" src="img/millenium-falcon.jpg" alt="millenium-falcon">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="r2d2">
-                        <img class="front-face" src="img/r2d2.jpg" alt="r2d2">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="r2d2">
-                        <img class="front-face" src="img/r2d2.jpg" alt="r2d2">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="spaceship">
-                        <img class="front-face" src="img/spaceship.jpg" alt="spaceship">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="spaceship">
-                        <img class="front-face" src="img/spaceship.jpg" alt="spaceship">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="stormtrooper">
-                        <img class="front-face" src="img/stormtrooper.jpg" alt="stormtrooper">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                    <div class="memory-card" data-starwars="stormtrooper">
-                        <img class="front-face" src="img/stormtrooper.jpg" alt="stormtrooper">
-                        <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
-                    </div>
-                </section> 
-            </div>
-        </div>    
-    </div> 
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            <span class="sr-only"></span>Time Left
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <section class="memory-game">
+                <div class="memory-card" data-starwars="camel">
+                    <img class="front-face" src="img/camel.jpg" alt="camel">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="camel">
+                    <img class="front-face" src="img/camel.jpg" alt="camel">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="darthVader">
+                    <img class="front-face" src="img/darthVader.jpg" alt="darthVader">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="darthVader">
+                    <img class="front-face" src="img/darthVader.jpg" alt="darthVader">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="deathStar">
+                    <img class="front-face" src="img/deathStar.jpg" alt="deathStar">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="deathStar">
+                    <img class="front-face" src="img/deathStar.jpg" alt="deathStar">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="fighter">
+                    <img class="front-face" src="img/fighter.jpg" alt="fighter">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="fighter">
+                    <img class="front-face" src="img/fighter.jpg" alt="fighter">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="millenium-falcon">
+                    <img class="front-face" src="img/millenium-falcon.jpg" alt="millenium-falcon">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="millenium-falcon">
+                    <img class="front-face" src="img/millenium-falcon.jpg" alt="millenium-falcon">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="r2d2">
+                    <img class="front-face" src="img/r2d2.jpg" alt="r2d2">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="r2d2">
+                    <img class="front-face" src="img/r2d2.jpg" alt="r2d2">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="spaceship">
+                    <img class="front-face" src="img/spaceship.jpg" alt="spaceship">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="spaceship">
+                    <img class="front-face" src="img/spaceship.jpg" alt="spaceship">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="stormtrooper">
+                    <img class="front-face" src="img/stormtrooper.jpg" alt="stormtrooper">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+                <div class="memory-card" data-starwars="stormtrooper">
+                    <img class="front-face" src="img/stormtrooper.jpg" alt="stormtrooper">
+                    <img class="back-face" src="img/darkSide.jpg" alt="darkSide">
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+
+        <audio id="music">
+            <source src="01 The Imperial March (Darth Vader_'s Theme).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+
+    </footer>
+
+
 
     <script src="script.js"></script>
+    <script>
+        // Playing music function
+
+        var myMusic = document.getElementById("music");
+        function play() {
+            myMusic.play();
+        }
+
+        function pause() {
+            myMusic.pause();
+        }
+
+        var i = 100;
+
+        var counterBack = setInterval(function () {
+            i--;
+            if (i > 0) {
+                $('.progress-bar').css('width', i + '%');
+            } else {
+                clearInterval(counterBack);
+            }
+
+        }, 1000);
+
+        // Dark Theme
+        function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
+
+    </script>
 
 </body>
 
