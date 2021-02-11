@@ -2,16 +2,24 @@
 /* The box-sizing: border-box property includes padding and border values into element’s total width and height */
 
 body {
+    
   
   /* Ellia Clerici from Pexels */
-  background-image: url("img/lightTheme2.jpg") ;
+  background-image: url("img/lightTheme2.jpg");
+  background-position: contain; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed; 
   
 }
 
 .dark-mode {
     /* Felix Mittermeller from Pexels */
   background-image: url("img/darkTheme.jpg");
-  color: white;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed; 
 }
 /* *{
     padding: 0;
@@ -92,10 +100,13 @@ In order to position .memory-card children, I added position: relative so I can 
 
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) { 
-   
+
+    .memory-game {
+        height: 580px;
+    }
     .memory-card {
-     width: calc(25% - 10px);
-     height: calc(20% - 10px);
+     width: calc(25% -10px);
+     height: calc(20%);
      /* margin-top: 40px; */
  }
    
@@ -103,6 +114,11 @@ In order to position .memory-card children, I added position: relative so I can 
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+
+    .memory-game {
+        height: 700px;
+        margin-top: 5%;
+    }
     .memory-card{
      width: calc(25% - 10px);
     height: calc(30% - 10px);
@@ -111,6 +127,10 @@ In order to position .memory-card children, I added position: relative so I can 
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    .memory-game {
+        height: 700px;
+        margin-top: 10%;
+    }
    .memory-card{
      width: calc(25% - 10px);
     height: calc(35% - 10px);
@@ -119,6 +139,11 @@ In order to position .memory-card children, I added position: relative so I can 
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+
+    .memory-game {   
+    height: 640px;
+    margin: auto;
+    }
     
  .memory-card{
      width: calc(25% - 10px);
@@ -128,6 +153,9 @@ In order to position .memory-card children, I added position: relative so I can 
 
  /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
+    .memory-game {  
+        margin-top: 5%;
+    }
 
      .memory-card{
      width: calc(25% - 10px);

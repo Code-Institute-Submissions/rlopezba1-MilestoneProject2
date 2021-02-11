@@ -51,16 +51,14 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Star Wars Memory Game</a>
+        <a class="navbar-brand" href="#">StarWars Memory Game</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-5">
                 <li class="nav-item mr-3">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                        Game Info
-                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Game Info</button>
                 </li>
                 <br>
                 <li class="nav-item mr-3">
@@ -158,8 +156,7 @@
                 </div>
             </section>
         </div>
-    </div>
-    <footer>
+    </div>  
 
         <audio id="music">
             <source src="01 The Imperial March (Darth Vader_'s Theme).mp3" type="audio/mpeg">
@@ -167,7 +164,7 @@
         </audio>
 
 
-    </footer>
+    
 
 
 
@@ -184,6 +181,8 @@
             myMusic.pause();
         }
 
+        // Progress Bar 
+
         var i = 100;
 
         var counterBack = setInterval(function () {
@@ -191,6 +190,8 @@
             if (i > 0) {
                 $('.progress-bar').css('width', i + '%');
             } else {
+                alert("GAME OVER YOUNG JEDI");
+                document.location.reload();
                 clearInterval(counterBack);
             }
 
