@@ -89,3 +89,35 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+// Playing music function
+
+        var myMusic = document.getElementById("music");
+        function play() {
+            myMusic.play();
+        }
+
+        function pause() {
+            myMusic.pause();
+        }
+
+        //Progress Bar 
+
+        var i = 100;
+
+        var counterBack = setInterval(function () {
+            i--;
+            if (i > 0) {
+                $('.progress-bar').css('width', i + '%');
+            } else {
+                alert("GAME OVER YOUNG JEDI");
+                document.location.reload();
+                clearInterval(counterBack);
+            }
+
+        }, 1000);
+
+        //Dark Theme
+        function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
