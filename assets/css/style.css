@@ -102,8 +102,10 @@ In order to position .memory-card children, I added position: relative so I can 
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) { 
 
+    
     .memory-game {
-        height: 580px;
+        height: 550px;
+        margin-top: 5%;
     }
     .memory-card {
      width: calc(25% -10px);
@@ -142,19 +144,26 @@ In order to position .memory-card children, I added position: relative so I can 
 @media (min-width: 1200px) { 
 
     .memory-game {   
-    height: 640px;
+    height: 440px;
     margin: auto;
     }
     
  .memory-card{
-     width: calc(25% - 10px);
-    height: calc(25% - 10px);
+     width: calc(25% -10px );
+    height: calc(20% -10px);
+    
  }
+
+ .front-face,
+.back-face {
+    padding: 0%;
+}
 }
 
  /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
     .memory-game {  
+         height: 640px;
         margin-top: 5%;
     }
 
@@ -162,6 +171,10 @@ In order to position .memory-card children, I added position: relative so I can 
      width: calc(25% - 10px);
     height: calc(30% - 10px);
  }
+ .front-face,
+.back-face {
+    padding: 5%;
+}
        
 }
  
