@@ -69,13 +69,7 @@
                     <button type="button" class="btn btn-outline-warning" value="Reload Page" onClick="window.location.reload();">Restart Game</button>
                 </li>
                 <br>
-                <li class="nav-item mr-3">
-                    <button onclick="play()" type="button" class="btn btn-outline-light">Play Music</button>
-                </li>
-                <br>
-                <li class="nav-item">
-                    <button onclick="pause()" type="button" class="btn btn-outline-light">Pause Music</button>
-                </li>
+                <button type="button" class="btn btn-outline-light" onClick="Play()">Music on/off</button>
             </ul>
         </div>
     </nav>
@@ -159,7 +153,7 @@
     </div>  
 
         <audio id="music">
-            <source src="01 The Imperial March (Darth Vader_'s Theme).mp3" type="audio/mpeg">
+            <source src="./assets/audio/01 The Imperial March (Darth Vader_'s Theme).mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
 

@@ -92,17 +92,6 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-// Playing music function
-
-        var myMusic = document.getElementById("music");
-        function play() {
-            myMusic.play();
-        }
-
-        function pause() {
-            myMusic.pause();
-        }
-
         //Progress Bar 
 
         var i = 100;
@@ -126,4 +115,23 @@ cards.forEach(card => card.addEventListener('click', flipCard));
         element.classList.toggle("dark-mode");
         }
 
-        
+        // Playing music function
+
+      function Play()
+        {
+            var imperialMarch = document.getElementById("music");
+            if(imperialMarch.paused)
+            {
+                imperialMarch.play();
+                document.getElementById("play").innerHTML="Pause";
+            }
+            else
+            {
+               imperialMarch.pause();
+               document.getElementById("Pause").innerHTML="Play";
+            }
+        }
+
+    
+
+                
