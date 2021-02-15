@@ -1,3 +1,6 @@
+
+
+
 // To flip the card when clicked, a class flip will be added to the element.
 // all memory - card elements with document.querySelectorAll, 
 
@@ -116,8 +119,11 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
         }, 1000);
 
+
         //Dark Theme
         function myFunction() {
         var element = document.body;
         element.classList.toggle("dark-mode");
         }
+
+        

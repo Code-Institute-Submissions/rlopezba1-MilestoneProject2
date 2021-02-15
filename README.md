@@ -2,7 +2,7 @@
 
 # StarWars Memory Game
 
-![Responsive Design](responsiveStarWars.png)
+![Responsive Design](./assets/documentation/wireframes/responsiveStarWars.png)
 
 - The Lighthouse Lawyers project is a law firm website that offer legal consulting services.
 - It is a project website but it could be a real one.
