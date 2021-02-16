@@ -92,21 +92,7 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-        //Progress Bar 
-
-        var i = 100;
-
-        var counterBack = setInterval(function () {
-            i--;
-            if (i > 0) {
-                $('.progress-bar').css('width', i + '%');
-            } else {
-                alert("GAME OVER YOUNG JEDI");
-                document.location.reload();
-                clearInterval(counterBack);
-            }
-
-        }, 1000);
+        
 
 
         //Dark Theme
@@ -132,6 +118,58 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             }
         }
 
-    
 
-                
+        //Progress Bar 
+
+        // var i = 100;
+
+        // var counterBack = setInterval(function () {
+        //     i--;
+        //     if (i > 0) {
+        //         $('.progress-bar').css('width', i + '%');
+        //     } else {
+        //         alert("GAME OVER YOUNG JEDI");
+        //         document.location.reload();
+        //         clearInterval(counterBack);
+        //     }
+
+        // }, 1000);
+
+
+        // // timer
+
+        // var input = document.getElementById("input"),
+        //     add;
+
+        //     function start() {
+        //     add = setInterval(function() {
+        //         input.value++;
+        //     }, 1000);
+        //     }
+
+        //     start();
+
+                               
+
+       
+        // timer
+        var i = 100;
+
+        var input = document.getElementById("input"),
+            add;
+
+            function start() {
+            add = setInterval(function() {
+                 i--;
+            if (i > 0) {
+                $('.progress-bar').css('width', i + '%');
+                input.value++;
+            } else {
+                alert("GAME OVER YOUNG JEDI");
+                document.location.reload();
+                clearInterval(add);
+            }                
+            }, 1000);
+            }
+
+            start();

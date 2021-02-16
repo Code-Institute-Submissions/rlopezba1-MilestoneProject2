@@ -13,6 +13,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="lib/easytimer/dist/easytimer.min.js"></script>
+    <script>
+        var timerInstance = new easytimer.Timer();
+    </script> -->
+   
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -58,27 +63,48 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-5">
                 <li class="nav-item mr-3">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Game Info</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Game
+                        Info</button>
                 </li>
                 <br>
                 <li class="nav-item mr-3">
-                    <button type="button" class="btn btn-outline-success" onclick="myFunction()">Light/ Dark mode</button>
+                    <button type="button" class="btn btn-outline-success" onclick="myFunction()">Light/ Dark
+                        mode</button>
                 </li>
                 <br>
                 <li class="nav-item mr-3">
-                    <button type="button" class="btn btn-outline-warning" value="Reload Page" onClick="window.location.reload();">Restart Game</button>
+                    <button type="button" class="btn btn-outline-warning" value="Reload Page"
+                        onClick="window.location.reload();">Restart Game</button>
                 </li>
                 <br>
-                <button type="button" class="btn btn-outline-light" onClick="Play()">Music on/off</button>
+                <li class="nav-item mr-3">
+                    <button type="button" class="btn btn-outline-light" onClick="Play()">Music on/off</button>
+                </li>
+                <br>
+                <!-- time in numbers -->
+                <!-- <li class="nav-item mr-3">
+                    <input type="text" class="btn btn-outline-light pr-0 pl-0" id="input" />
+                </li> -->
+                <br>
+                <li class="nav-item mr-3">
+                    <button type="button" class="btn btn-outline-light" onclick="clearInterval(add)" >Pause</button>
+                </li>  
+                <br>
+                <li class="nav-item mr-3">
+                    <button type="button" class="btn btn-outline-light" onclick="start()">Start Time</button>
+                </li>
+                              
             </ul>
         </div>
     </nav>
+
 
     <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
             <span class="sr-only"></span>Time Left
         </div>
     </div>
+               
 
 
     <div class="container">
@@ -150,15 +176,17 @@
                 </div>
             </section>
         </div>
-    </div>  
+    </div>
 
-        <audio id="music">
-            <source src="./assets/audio/01 The Imperial March (Darth Vader_'s Theme).mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <audio id="music">
+        <source src="./assets/audio/01 The Imperial March (Darth Vader_'s Theme).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-    <script src="./assets/js/script.js"></script>    
+    <script src="./assets/js/script.js"></script>
+   
     
+
 </body>
 
 </html>
