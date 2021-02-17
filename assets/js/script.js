@@ -37,22 +37,29 @@ function flipCard() {
     secondCard = this;
 
     checkForMatch();
-
 }
-
 
 function checkForMatch() {
     // do cards match?
-    let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;
-
+    let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;       
     isMatch ? disableCards() : unFlipCards();
 
+    if (hasFlippedCard.length == cards.length){
+         alert("you win");
+                clearInterval(add);
+    }
 }
 
+ 
+
+       
+          
 function disableCards() {
     // it's a match!!
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+
+        
 
     resetBoard();
 }
@@ -152,7 +159,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
                                
 
        
-        // timer
+        // timer and progress bar combination
         var i = 100;
 
         var input = document.getElementById("input"),
@@ -173,3 +180,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             }
 
             start();
+// ---------------------------------------------------------------------
+
+                
+

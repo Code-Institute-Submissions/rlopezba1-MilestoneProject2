@@ -99,6 +99,10 @@ In order to position .memory-card children, I added position: relative so I can 
 }
 
 
+
+
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) { 
 
