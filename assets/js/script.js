@@ -9,6 +9,7 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let matches = 0
 
 
 function flipCard() {
@@ -42,24 +43,26 @@ function flipCard() {
 function checkForMatch() {
     // do cards match?
     let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;       
+    matches++;
+        if (matches == 8) {
+            gameFinished();
+             alert("YOU WIN");
+        }
+        
+        
     isMatch ? disableCards() : unFlipCards();
-
-    if (hasFlippedCard.length == cards.length){
-         alert("you win");
-                clearInterval(add);
-    }
 }
 
- 
 
-       
+function gameFinished() {
+   
+    
+}
           
 function disableCards() {
     // it's a match!!
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
-        
 
     resetBoard();
 }
@@ -99,9 +102,9 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+
+
         
-
-
         //Dark Theme
         function myFunction() {
         var element = document.body;
@@ -124,39 +127,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
                document.getElementById("Pause").innerHTML="Play";
             }
         }
-
-
-        //Progress Bar 
-
-        // var i = 100;
-
-        // var counterBack = setInterval(function () {
-        //     i--;
-        //     if (i > 0) {
-        //         $('.progress-bar').css('width', i + '%');
-        //     } else {
-        //         alert("GAME OVER YOUNG JEDI");
-        //         document.location.reload();
-        //         clearInterval(counterBack);
-        //     }
-
-        // }, 1000);
-
-
-        // // timer
-
-        // var input = document.getElementById("input"),
-        //     add;
-
-        //     function start() {
-        //     add = setInterval(function() {
-        //         input.value++;
-        //     }, 1000);
-        //     }
-
-        //     start();
-
-                               
+                      
 
        
         // timer and progress bar combination
@@ -180,7 +151,6 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             }
 
             start();
-// ---------------------------------------------------------------------
 
                 
 

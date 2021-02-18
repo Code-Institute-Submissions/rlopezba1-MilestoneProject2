@@ -119,6 +119,8 @@ In order to position .memory-card children, I added position: relative so I can 
    
 }
 
+
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
