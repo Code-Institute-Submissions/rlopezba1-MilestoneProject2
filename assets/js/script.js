@@ -76,10 +76,10 @@ function gameFinished() {
                 setInterval(function(){ location.reload(); }, 3000);
                 
             } else {
-                swal("Come back another day then !! Good Bye!", {
-                button: false,    
+                swal("May the Force be with you !! Good Bye!", {
+                button: true,    
                 });
-                setInterval(function(){ close(); }, 3000);
+                setInterval(function(){ pauseGame(); }, 3000);
             }
             });
 
@@ -144,17 +144,11 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             if(imperialMarch.paused)
             {
                 imperialMarch.play();
-               
-            }
-            else
-            {
+            }else{
                imperialMarch.pause();
-              
             }
         }
-                      
-
-       
+                             
         // timer and progress bar combination
         var i = 100;
 
@@ -162,11 +156,14 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             add;
 
             function start() {
+                lockBoard = false;
             add = setInterval(function() {
                  i--;
             if (i > 0) {
                 $('.progress-bar').css('width', i + '%');
                 input.value++;
+                
+               
             } else {
                 swal("GAME OVER!", "You run out of time! the game will start again automatically", "error", {
                 button: false,    
@@ -177,6 +174,17 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             }, 1000);
             }
 
-            start();             
+            start();       
+            
+            
+            
+
+            // variable to store a reference to the timer
+            
+            function pauseGame() {
+            // To cancel an interval, pass the timer to clearInterval()
+            clearInterval(add);
+            lockBoard = true;
+        }
 
         
