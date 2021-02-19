@@ -13,10 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script src="lib/easytimer/dist/easytimer.min.js"></script>
-    <script>
-        var timerInstance = new easytimer.Timer();
-    </script> -->
+    <!-- <script src="lib/easytimer/dist/easytimer.min.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -24,9 +22,7 @@
 <body>
     <!-- The game has 12 cards and each card consists of a container div named .memory-card, which holds two img elements.
     The first one represents the card front-face and the second its back-face. The set of cards will be wrapped in a section container element -->
-    <!-- Modal -->
-
-
+    
 
     <!-- The Modal -->
     <div class="modal" id="myModal">
@@ -83,12 +79,12 @@
                 </li>
                 <br>
                 <!-- time in numbers -->
-                <!-- <li class="nav-item mr-3">
+                <li class="nav-item mr-3">
                     <input type="text" class="btn btn-outline-light pr-0 pl-0" id="input" />
-                </li> -->
+                </li>
                 <br>
                 <li class="nav-item mr-3">
-                    <button type="button" class="btn btn-outline-light" onclick="clearInterval(add)" >Pause</button>
+                    <button type="button" class="btn btn-outline-light" onclick="clearInterval(add)" >Pause Time</button>
                 </li>  
                 <br>
                 <li class="nav-item mr-3">
@@ -102,7 +98,7 @@
 
     <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-            <span class="sr-only"></span>Time Left
+            <span class="sr-only" id="input"></span>Time Left
         </div>
     </div>
 

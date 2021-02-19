@@ -6,6 +6,7 @@
 
 const cards = document.querySelectorAll('.memory-card');
 
+var winAudio = new Audio('assets/audio/02 Main Title_Rebel Blockade Runner.mp3');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -14,8 +15,8 @@ let matches = 0
 
 function flipCard() {
 
-//  declaring a lockBoard variable: When the player clicks the second card, 
-//  lockBoard will be set to true and the condition if (lockBoard) return;
+//  lockBoard variable: When the player clicks the second card, 
+//  lockBoard will set to true and the condition if (lockBoard) return;
 //   will prevent any card flipping before the cards are hidden or match
     if (lockBoard) return;
 
@@ -41,22 +42,40 @@ function flipCard() {
 }
 
 function checkForMatch() {
-    // do cards match?
-    let isMatch = firstCard.dataset.starwars === secondCard.dataset.starwars;       
-    matches++;
+    // if cards match go to disableCards function
+    if (firstCard.dataset.starwars === secondCard.dataset.starwars) {        
+        matches = matches + 1;
         if (matches == 8) {
             gameFinished();
-             alert("YOU WIN");
         }
-        
-        
-    isMatch ? disableCards() : unFlipCards();
+        disableCards();
+    } else {
+        // if cards don't match go to unflipCards function
+        unFlipCards();
+    }
 }
 
-
 function gameFinished() {
-   
     
+    winAudio.play();
+    clearInterval(add);
+     swal({
+            title: "You Win!!",
+            text: "Do you want to try again? I am sure you will be faster!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willPlay) => {
+            if (willPlay) {
+                swal("Good! Go ahead young Jedi!", {
+                icon: "success",
+                });
+            } else {
+                swal("Come back another day then !!");
+            }
+            });
+
 }
           
 function disableCards() {
@@ -80,8 +99,9 @@ function unFlipCards() {
 }
 
 
-// The firstCard and secondCard variables need to be reset after each round.
-// place the hasFlippedCard = false; and lockBoard = false. The es6 destructuring assignment [var1, var2] = ['value1', 'value2']
+// The firstCard and secondCard variables need to 
+// be reset after each round.
+// place the hasFlippedCard = false; and lockBoard = false. 
 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
@@ -102,9 +122,7 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-
-
-        
+       
         //Dark Theme
         function myFunction() {
         var element = document.body;
@@ -119,12 +137,12 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             if(imperialMarch.paused)
             {
                 imperialMarch.play();
-                document.getElementById("play").innerHTML="Pause";
+               
             }
             else
             {
                imperialMarch.pause();
-               document.getElementById("Pause").innerHTML="Play";
+              
             }
         }
                       
@@ -150,7 +168,6 @@ cards.forEach(card => card.addEventListener('click', flipCard));
             }, 1000);
             }
 
-            start();
+            start();             
 
-                
-
+        
