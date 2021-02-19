@@ -55,6 +55,8 @@ function checkForMatch() {
     }
 }
 
+// https://sweetalert.js.org/guides/
+
 function gameFinished() {
     
     winAudio.play();
@@ -71,8 +73,13 @@ function gameFinished() {
                 swal("Good! Go ahead young Jedi!", {
                 icon: "success",
                 });
+                setInterval(function(){ location.reload(); }, 3000);
+                
             } else {
-                swal("Come back another day then !!");
+                swal("Come back another day then !! Good Bye!", {
+                button: false,    
+                });
+                setInterval(function(){ close(); }, 3000);
             }
             });
 
@@ -161,8 +168,10 @@ cards.forEach(card => card.addEventListener('click', flipCard));
                 $('.progress-bar').css('width', i + '%');
                 input.value++;
             } else {
-                alert("GAME OVER YOUNG JEDI");
-                document.location.reload();
+                swal("GAME OVER!", "You run out of time! the game will start again automatically", "error", {
+                button: false,    
+                });
+                setInterval(function(){ location.reload(); }, 7000);
                 clearInterval(add);
             }                
             }, 1000);
