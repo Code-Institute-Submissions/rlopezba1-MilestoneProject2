@@ -1,6 +1,3 @@
-
-
-
 // To flip the card when clicked, a class flip will be added to the element.
 // all memory - card elements with document.querySelectorAll, 
 
@@ -15,94 +12,99 @@ let matches = 0
 
 function flipCard() {
 
-//  lockBoard variable: When the player clicks the second card, 
-//  lockBoard will set to true and the condition if (lockBoard) return;
-//   will prevent any card flipping before the cards are hidden or match
-    if (lockBoard) return;
+	//  lockBoard variable: When the player clicks the second card, 
+	//  lockBoard will set to true and the condition if (lockBoard) return;
+	//   will prevent any card flipping before the cards are hidden or match
+	if (lockBoard) return;
 
-// the player can click twice on the same card. The matching condition would evaluate to true, removing the event listener from that card.
-// To prevent, it check if the current clicked card is equal to the firstCard and return if positive.
+	// the player can click twice on the same card. The matching condition would evaluate to true, removing the event listener from that card.
+	// To prevent, it check if the current clicked card is equal to the firstCard and return if positive.
 
-    if (this === firstCard) return;
+	if (this === firstCard) return;
 
-    this.classList.add('flip');
+	this.classList.add('flip');
 
-    if (!hasFlippedCard) {
-        // first click
-        hasFlippedCard = true;
-        firstCard = this;
+	if (!hasFlippedCard) {
+		// first click
+		hasFlippedCard = true;
+		firstCard = this;
 
-        return;
-    }
-    // second click
-    hasFlippedCard = false;
-    secondCard = this;
+		return;
+	}
+	// second click
+	hasFlippedCard = false;
+	secondCard = this;
 
-    checkForMatch();
+	checkForMatch();
 }
 
 function checkForMatch() {
-    // if cards match go to disableCards function
-    if (firstCard.dataset.starwars === secondCard.dataset.starwars) {        
-        matches = matches + 1;
-        if (matches == 8) {
-            gameFinished();
-        }
-        disableCards();
-    } else {
-        // if cards don't match go to unflipCards function
-        unFlipCards();
-    }
+	// if cards match go to disableCards function
+	if (firstCard.dataset.starwars === secondCard.dataset.starwars) {
+		matches = matches + 1;
+		if (matches == 8) {
+			gameFinished();
+		}
+		disableCards();
+	} else {
+		// if cards don't match go to unflipCards function
+		unFlipCards();
+	}
 }
 
 // https://sweetalert.js.org/guides/
 
 function gameFinished() {
-    
-    winAudio.play();
-    clearInterval(add);
-     swal({
-            title: "You Win!!",
-            text: "Do you want to try again? I am sure you will be faster!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-            })
-            .then((willPlay) => {
-            if (willPlay) {
-                swal("Good! Go ahead young Jedi!", {
-                icon: "success",
-                });
-                setInterval(function(){ location.reload(); }, 3000);
-                
-            } else {
-                swal("May the Force be with you !! Good Bye!", {
-                button: true,    
-                });
-                setInterval(function(){ pauseGame(); }, 3000);
-            }
-            });
+
+	winAudio.play();
+	clearInterval(add);
+	swal({
+			title: "You Win!!",
+			text: "Do you want to try again? I am sure you will be faster!",
+			icon: "warning",
+			buttons: true,
+			dangerMode: true,
+		})
+		.then((willPlay) => {
+			if (willPlay) {
+				swal("Good! Go ahead young Jedi!", {
+                    icon: "success",
+                    button: false,
+				});
+				setInterval(function () {
+					location.reload();
+				}, 5000);
+
+			} else {
+				swal("May the Force be with you !! Good Bye!", {
+					button: true,
+				});
+				setInterval(function () {
+					pauseGame();
+				}, 3000);
+			}
+		});
 
 }
-          
-function disableCards() {
-    // it's a match!!
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
 
-    resetBoard();
+function disableCards() {
+	// it's a match!!
+	firstCard.removeEventListener('click', flipCard);
+	secondCard.removeEventListener('click', flipCard);
+
+	resetBoard();
 }
 
 function unFlipCards() {
-    lockBoard = true;
+	lockBoard = true;
 
-    // not a match!!
-    setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
+	// not a match!!
+	setTimeout(() => {
+		firstCard.classList.remove('flip');
+		secondCard.classList.remove('flip');
 
-        resetBoard();
-    }, 1500);
+		resetBoard();
+	}, 1500);
 }
 
 
@@ -111,8 +113,8 @@ function unFlipCards() {
 // place the hasFlippedCard = false; and lockBoard = false. 
 
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
+	[hasFlippedCard, lockBoard] = [false, false];
+	[firstCard, secondCard] = [null, null];
 }
 
 
@@ -120,71 +122,67 @@ function resetBoard() {
 // to invoke the shuffle function, by  the Immediately Invoked Function Expression (IIFE), which means it will execute itself right after its declaration
 
 (function shuffle() {
-    cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
-        card.style.order = randomPos;
-    })
+	cards.forEach(card => {
+		let randomPos = Math.floor(Math.random() * 12);
+		card.style.order = randomPos;
+	})
 })();
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-       
-        //Dark Theme
-        function myFunction() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-        }
 
-        // Playing music function
+//Dark Theme
+function myFunction() {
+	var element = document.body;
+	element.classList.toggle("dark-mode");
+}
 
-      function Play()
-        {
-            var imperialMarch = document.getElementById("music");
-            if(imperialMarch.paused)
-            {
-                imperialMarch.play();
-            }else{
-               imperialMarch.pause();
-            }
-        }
-                             
-        // timer and progress bar combination
-        var i = 100;
+// Playing music function
 
-        var input = document.getElementById("input"),
-            add;
+function Play() {
+	var imperialMarch = document.getElementById("music");
+	if (imperialMarch.paused) {
+		imperialMarch.play();
+	} else {
+		imperialMarch.pause();
+	}
+}
 
-            function start() {
-                lockBoard = false;
-            add = setInterval(function() {
-                 i--;
-            if (i > 0) {
-                $('.progress-bar').css('width', i + '%');
-                input.value++;
-                
-               
-            } else {
-                swal("GAME OVER!", "You run out of time! the game will start again automatically", "error", {
-                button: false,    
-                });
-                setInterval(function(){ location.reload(); }, 7000);
-                clearInterval(add);
-            }                
-            }, 1000);
-            }
+// timer and progress bar combination
+var i = 100;
 
-            start();       
-            
-            
-            
+var input = document.getElementById("input"),
+	add;
 
-            // variable to store a reference to the timer
-            
-            function pauseGame() {
-            // To cancel an interval, pass the timer to clearInterval()
-            clearInterval(add);
-            lockBoard = true;
-        }
+function start() {
+	lockBoard = false;
+	add = setInterval(function () {
+		i--;
+		if (i > 0) {
+			$('.progress-bar').css('width', i + '%');
+			input.value++;
 
-        
+
+		} else {
+			swal("GAME OVER!", "You run out of time! the game will start again automatically", "error", {
+				button: false,
+			});
+			setInterval(function () {
+				location.reload();
+			}, 7000);
+			clearInterval(add);
+		}
+	}, 1000);
+}
+
+start();
+
+
+// variable to store a reference to the timer
+
+function pauseGame() {
+	// To cancel an interval, pass the timer to clearInterval()
+	clearInterval(add);
+	lockBoard = true;
+}
