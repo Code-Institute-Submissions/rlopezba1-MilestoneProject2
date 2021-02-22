@@ -118,7 +118,7 @@ In order to position .memory-card children, I added position: relative so I can 
 @media (min-width: 768px) { 
 
     .memory-game {
-        height: 700px;
+        height: 600px;
         margin-top: 5%;
     }
     .memory-card{

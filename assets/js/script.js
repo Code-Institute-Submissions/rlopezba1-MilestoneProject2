@@ -52,8 +52,7 @@ function checkForMatch() {
 	}
 }
 
-// https://sweetalert.js.org/guides/
-
+// The library sweetalert has been used to create alert windows at the end of the game
 function gameFinished() {
 
 	winAudio.play();
@@ -80,7 +79,8 @@ function gameFinished() {
 					button: true,
 				});
 				setInterval(function () {
-					pauseGame();
+                    pauseGame();
+                    imperialMarch.pause();
 				}, 3000);
 			}
 		});
@@ -113,8 +113,10 @@ function unFlipCards() {
 // place the hasFlippedCard = false; and lockBoard = false. 
 
 function resetBoard() {
-	[hasFlippedCard, lockBoard] = [false, false];
-	[firstCard, secondCard] = [null, null];
+    hasFlippedCard= false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
 }
 
 
