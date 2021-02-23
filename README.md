@@ -4,17 +4,18 @@
 
 ![Responsive Design](./assets/documentation/wireframes/responsiveStarWars.png)
 
-- The Lighthouse Lawyers project is a law firm website that offer legal consulting services.
-- It is a project website but it could be a real one.
+- Starwars Memory Game is a game to speed up memory, and is for any person, of any age, to have fun.
 - It has a relax presentation, without too many ornaments, focused on user action.
-- There are 4 links, the home page that call an action, the lawyers's presentation where lawyers are presented broadly and clearly,
-the practise area to clearly specify areas of expertise, and the location and contact form.
+- The game is presented in a simple and direct way, so that the user can start playing without wasting time on other things. 
+In addition to the game there are secondary options, such as changing the background of the screen or activating the sound to make the game more enjoyable.
 
 **Project Contains:**
 
-User centric Website with HTML, CSS and Javascript Bootstrap Framework.
+User centric Website with HTML, CSS, JavaScript, Bootstrap, Sweetalert (JS library).
 
 Live version : [View the live project here](https://rlopezba1.github.io/MilestoneProject2/)
+
+[Contribution guidelines for this project](Skeleleton)
 
 ## UX Strategy
 

@@ -3,11 +3,14 @@
 
 const cards = document.querySelectorAll('.memory-card');
 
-var winAudio = new Audio('assets/audio/02 Main Title_Rebel Blockade Runner.mp3');
+let winAudio = new Audio('assets/audio/02 Main Title_Rebel Blockade Runner.mp3');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let matches = 0
+var i = 100;
+var input = document.getElementById("input"),
+	add;
 
 
 function flipCard() {
@@ -134,13 +137,13 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
-//Dark Theme
+// This function change the theme to Dark mode when is called 
 function myFunction() {
 	var element = document.body;
 	element.classList.toggle("dark-mode");
 }
 
-// Playing music function
+// This function play the music when the button is clickedPlaying music function
 
 function Play() {
 	var imperialMarch = document.getElementById("music");
@@ -151,11 +154,7 @@ function Play() {
 	}
 }
 
-// timer and progress bar combination
-var i = 100;
-
-var input = document.getElementById("input"),
-	add;
+// This function start the timer and progress bar in combination. 
 
 function start() {
 	lockBoard = false;
@@ -181,10 +180,9 @@ function start() {
 start();
 
 
-// variable to store a reference to the timer
+// Function that lock the cards when the game is paused and stop the time
 
 function pauseGame() {
-	// To cancel an interval, pass the timer to clearInterval()
 	clearInterval(add);
 	lockBoard = true;
 }
