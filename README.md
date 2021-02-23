@@ -57,7 +57,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
 ## Changes I made throuought the project
 
-    - Initially, I wanted the information to appear right next to the game but I realized that in smaller devices, the cards were very small, 
+- Initially, I wanted the information to appear right next to the game but I realized that in smaller devices, the cards were very small, 
     so I opted to place all the options in a navigation bar so that small devices can play perfectly as the navigation bar collapses, and it is up to the user to see them or not.
     
 ## Features
@@ -204,7 +204,7 @@ editor of your choice by following the steps below:
 
     5. [Tutorialspoint](https://www.tutorialspoint.com/index.htm) used to solve coding doubts during the web creation process.
 
-    6. [freeCodeCamp](https:// freeCodeCamp.org/) used to help me with Memory game structure.
+    6. [freeCodeCamp](https://freeCodeCamp.org/) used to help me with Memory game structure.
 
     7. [javascript-tutor.net](https://javascript-tutor.net/) used to help me with Memory game code.
 
