@@ -15,7 +15,6 @@ User centric Website with HTML, CSS, JavaScript, Bootstrap, Sweetalert (JS libra
 
 Live version : [View the live project here](https://rlopezba1.github.io/MilestoneProject2/)
 
-[Contribution guidelines for this project](Skeleleton)
 
 ## UX Strategy
 
@@ -55,6 +54,11 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
     2. As a site visitor, I want to learn how to play.
     3. As a site visitor, I want to see how long I have left to finish
     4. As a site visitor, I want to put music and change the background
+
+## Changes I made throuought the project
+
+    - Initially, I wanted the information to appear right next to the game but I realized that in smaller devices, the cards were very small, 
+    so I opted to place all the options in a navigation bar so that small devices can play perfectly as the navigation bar collapses, and it is up to the user to see them or not.
     
 ## Features
 
