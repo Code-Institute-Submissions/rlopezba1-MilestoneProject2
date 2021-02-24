@@ -146,12 +146,16 @@ function myFunction() {
 // This function play the music when the button is clickedPlaying music function
 
 function Play() {
-	var imperialMarch = document.getElementById("music");
+    let imperialMarch = document.getElementById("music");
+    let iconMusic = document.getElementById("icon");
 	if (imperialMarch.paused) {
-		imperialMarch.play();
+        imperialMarch.play();
+        iconMusic.innerHTML = "Music Off"
+           
 	} else {
-		imperialMarch.pause();
-	}
+        imperialMarch.pause();        
+        iconMusic.innerHTML = "Music On"
+    }
 }
 
 // This function start the timer and progress bar in combination. 
