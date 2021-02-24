@@ -31,11 +31,11 @@
                <!-- Modal body -->
                <div class="modal-body">
                   <p> The purpose of this memory game is:</p>
-                  <p>* To memorize the locations of the cards in the game</p>
-                  <p>* Make pairs of cards by turning them over 2 by 2</p>
-                  <p>* When the 2 cards match, it's a pair!</p>
-                  <p>* You win the pair and have the right to play again.</p>
-                  <p>* Otherwise the cards are automatically turned face down and you
+                  <p>- To memorize the locations of the cards in the game.</p>
+                  <p>- Make pairs of cards by turning them over 2 by 2.</p>
+                  <p>- When the 2 cards match, it's a pair!</p>
+                  <p>- You win the pair and have the right to play again.</p>
+                  <p>- Otherwise the cards are automatically turned face down and you
                      have to make a new try.
                   </p>
                </div>
@@ -62,22 +62,21 @@
                   mode</button>
                </li>
                <li class="nav-item mr-3">
-                  <button type="button" class="btn btn-outline-warning" value="Reload Page"
-                     onClick="window.location.reload();">Restart Game</button>
-               </li>
-               <li class="nav-item mr-3">
                   <button type="button" class="btn btn-outline-light btn-xl" onClick="Play()" id="icon" >Music On</button>
                </li>
+            </ul>
+            <ul class="nav justify-content-end">   
                <!-- time in numbers -->
                <li class="nav-item mr-3">
-                  <input type="text" class="btn btn-outline-light pr-0 pl-0" id="input" />
+                  <input type="text" class="btn btn-outline-light float-right justify-content-end" id="input" />
                </li>
                <li class="nav-item mr-3">
-                  <button type="button" class="btn btn-outline-light" id="pause" onclick="pauseGame()" >Pause Time</button>
+                  <button type="button" class="btn btn-outline-light " id="unique" onclick="uniqueButton()">Pause Time</button>
                </li>
-               <li class="nav-item mr-3">
-                  <button type="button" class="btn btn-outline-light" id="start" onclick="start()">Start Time</button>
-               </li>
+               <li class="nav-item">
+                  <button type="button" class="btn btn-outline-warning " value="Reload Page" id="reStart"
+                     onClick="reStart();">Start Game</button>
+               </li>              
             </ul>
          </div>
       </nav>

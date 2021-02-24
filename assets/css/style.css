@@ -98,6 +98,9 @@ In order to position .memory-card children, I added position: relative so I can 
   overflow: hidden;
 }
 
+#input {
+    width: 35%;    
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 576px) { 

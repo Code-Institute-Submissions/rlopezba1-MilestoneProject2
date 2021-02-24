@@ -75,7 +75,7 @@ function gameFinished() {
 				});
 				setInterval(function () {
 					location.reload();
-				}, 5000);
+				}, 3000);
 
 			} else {
 				swal("May the Force be with you !! Good Bye!", {
@@ -160,7 +160,10 @@ function Play() {
 
 // This function start the timer and progress bar in combination. 
 
+
+
 function start() {
+    //window.location.reload();
 	lockBoard = false;
 	add = setInterval(function () {
 		i--;
@@ -181,12 +184,39 @@ function start() {
 	}, 1000);
 }
 
-start();
-
 
 // Function that lock the cards when the game is paused and stop the time
 
-function pauseGame() {
-	clearInterval(add);
-	lockBoard = true;
+    function pauseGame() {
+        clearInterval(add);
+        lockBoard = true;
+    }
+
+    function uniqueButton(){
+        let unique = document.getElementById("unique");
+        if (unique.innerHTML === "Pause Time") {
+            unique.innerHTML = "Start Time";
+            pauseGame();
+        } else {
+            unique.innerHTML = "Pause Time";
+            start();
+        }
+    }
+
+function reStart(){
+   start();
+   $("#reStart").click(function(){
+    location.reload();
+    });
+
+    let stopButton = document.getElementById("reStart");
+        if (stopButton.innerHTML === "Finish Game") {
+            stopButton.innerHTML = "Start Game";
+           
+        } else {
+            stopButton.innerHTML = "Finish Game";
+            
+        }
+
+
 }
