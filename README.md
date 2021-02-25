@@ -4,10 +4,46 @@
 
 ![Responsive Design](./assets/documentation/wireframes/responsiveStarWars.png)
 
+
+## Table of contents
+1. [Introduction](#Introduction)
+2. [UX](#UX)
+    1. [Game Objective](#Game-Objective)
+    2. [User Objective](#User-Objective)
+    3. [Project Goals](#Project-Goals)
+    4. [User Stories](#User-Stories)
+    4. [Design](#Design)
+3. [Changes I made throuought the project](#Changes-I-made-throuought-the-project)
+3. [Features](#Features)
+    1. [Design Features](#Design-Features) 
+    2. [Existing Features](#Existing-Features)
+    3. [Features to Implement in the future](#Features-to-Implement-in-the-future)
+    4. [Skeleleton](#Skeleleton)
+4. [Issues and Bugs](#Issues-and-Bugs)
+5. [Technologies Used](#Technologies-Used)
+     1. [Languages Used](#Languages-Used)
+     2. [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+6. [Testing](#Testing)
+     1. [Testing.md](TESTING.md)
+7. [Deployment](#Deployment)
+     1. [Forking the Repository](#Forking-the-Repository)
+     2. [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
+     3. [Creating a Clone](#Creating-a-Clone)
+8. [Credits](#Credits)
+     1. [Content](#Content)
+     2. [Media](#Media)
+     3. [Code](#Code)
+9. [Acknowledgements](#Acknowledgements)
+***
+
+## Introduction
+
 - Starwars Memory Game is a game to speed up memory, and is for any person, of any age, to have fun.
 - It has a relax presentation, without too many ornaments, focused on user action.
 - The game is presented in a simple and direct way, so that the user can start playing without wasting time on other things. 
-In addition to the game there are secondary options, such as changing the background of the screen or activating the sound to make the game more enjoyable.
+- In addition to the game there are secondary options, such as changing the background of the screen or activating the sound to make the game more enjoyable.
+
+[Back to top ⇧](#StarWars-Memory-Game)
 
 **Project Contains:**
 
@@ -55,10 +91,25 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
     3. As a site visitor, I want to see how long I have left to finish
     4. As a site visitor, I want to put music and change the background
 
+- Design
+
+    - Colors:
+        - A palette of three colors to try to give an elegant and relaxed image, where each color complements each other.
+        - Color palette - Three main colors complement the design of the site. These are shown below: 
+        - <span style="color: #1c7ccc">#1c7ccc It's the background color for the cards</span>
+        - <span style="color: #007bff">#007bff It's info button color</span>
+        - <span style="color: #28a745">#28a745 It's dark/light button color</span>
+        - <span style="color: #ffc107">#ffc107 It's the restart button color</span>
+        - <span style="color: #f8f9fa">#f8f9fa It's the music button color</span>  
+
+    - Typography:
+    
+[Back to top ⇧](#StarWars-Memory-Game)
+
 ## Changes I made throuought the project
 
-- Initially, I wanted the information to appear right next to the game but I realized that in smaller devices, the cards were very small, 
-    so I opted to place all the options in a navigation bar so that small devices can play perfectly as the navigation bar collapses, and it is up to the user to see them or not.
+- Initially, I wanted the information to appear right next to the game but I realized that in smaller devices, the cards were very small.
+- So I opted to place all the options in a navigation bar so that small devices can play perfectly as the navigation bar collapses, and it is up to the user to see them or not.
     
 ## Features
 
@@ -80,30 +131,25 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
    
 - Responsive Design
     - I have changed the initial design, as I think it is important to give the maximum importance to the game, and therefore the cards should be as large as possible 
-    on the smallest devices. The information of the game, 
-    the change of theme, or the activation of the music are secondary, so on small devices, they are hidden and it is up to the user if they want to use them or not.
+    on the smallest devices.
+    - The information of the game, the change of theme, or the activation of the music are secondary, so on small devices, they are hidden and it is up to the user if they want to use them or not.
 
-## Design
+## Issues and Bugs
+The text on the main page did not look good on some devices. 
+- I had to change the margin and heights for these devices.
+- I had some problems with combination of CSS and Bootstrap structure.
+- I had some problems with the cards on the small size screen. I solved it by changing the margins and heights.
 
-- Colors:
-    A palette of three colors to try to give an elegant and relaxed image, where each color complements each other.
-    Color palette - Three main colors complement the design of the site. These are shown below: 
-    - <span style="color: #1c7ccc">#1c7ccc It's the background color for the cards</span>
-    - <span style="color: #007bff">#007bff It's info button color</span>
-    - <span style="color: #28a745">#28a745 It's dark/light button color</span>
-    - <span style="color: #ffc107">#ffc107 It's the restart button color</span>
-    - <span style="color: #f8f9fa">#f8f9fa It's the music button color</span>
-  
+All of these problems have taken me a long time but I have enjoyed solving them.
 
-- Typography:
-    
+[Back to top ⇧](#StarWars-Memory-Game)
 
 ## Technologies Used
 ### Languages Used
 - HTML5
 - CSS3
 - JavaScript
-### Frameworks, Libraries & Programs 
+### Frameworks, Libraries & Programs Used
 1. [Bootstrap 4](https://getbootstrap.com/) was used to assist with the responsiveness and styling of the website.
 2. [Google Fonts](https://fonts.google.com/) were used to import the 'Roboto' font into the style.css file
          which is used on all pages throughout the project.
@@ -113,37 +159,9 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 6. [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
 7. [Microsoft Photo Editor](https://www.microsoft.com/en-us/windows/photo-movie-editor) was used to resizing images and editing photos for the website.
 8. [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
-## Testing
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project 
-to ensure there were no syntax errors in the project, and Freeformatter to style the code.
--	W3C Markup Validator 
--	W3C CSS Validator
--   Freeformatter
-
-### Testing Features
-- A large amount of testing was done to ensure that all pages were linking correctly.
-- The navbar was tested to collapse at the correct breakpoint.
-- The form and the modal were both tested for validation of inputted data and that the user is forwarded 
-to the response page once submitted.
-- All buttons and nav links were checked for correct forwarding address.
-### Testing Responsive action
-- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
-
-
-### Testing Different browsers
-
-- The Website was tested on Google Chrome, Microsoft Edge, Opera and Safari browsers.
-
-### Issues Found
-The text on the main page did not look good on some devices. 
-- I had to change the margin and heights for these devices.
-- I had some problems with combination of CSS and Bootstrap structure.
-- I had some problems with the cards on the small size screen. I solved it by changing the margins and heights.
-
-All of these problems have taken me a long time but I have enjoyed solving them.
-
 
 ## Deployment
+### Forking the Repository
 The site was developed in GitPod and pushed to the following remote GitHub repository - [REPO](https://github.com/rlopezba1/MilestoneProject2)
 
 The following GIT commands were used throughout deployment:
@@ -154,7 +172,7 @@ The following GIT commands were used throughout deployment:
 - git push ------ to push the files to the master branch of the GitHub repo.
 
 
-### Hosting on GitHub Pages
+### Deploying on GitHub Pages
 This site is hosted using GitHub pages, deployed directly from the master branch. - [LIVE SITE](https://rlopezba1.github.io/MilestoneProject2/)
 
 The following steps were taken to complete the hosting process.
@@ -167,7 +185,7 @@ The following steps were taken to complete the hosting process.
 - The page will automatically refresh.
 
 
-#### Cloning
+### Creating a Clone
 To run this code locally, you can clone this repository directly into the
 editor of your choice by following the steps below:
 
@@ -176,6 +194,8 @@ editor of your choice by following the steps below:
 - Type the following into your Terminal: git clone https://github.com/rlopezba1/MilestoneProject2
 - Press Enter to create a local clone.
 - To cut ties with this GitHub repository, type git remote rm origin into the terminal.
+
+[Back to top ⇧](#StarWars-Memory-Game)
 
 ## Credits
 
@@ -188,6 +208,14 @@ editor of your choice by following the steps below:
 1. Light theme Photo by  Ellia Clerici from Pexels
 2. Dark theme Photo by  Felix Mittermeller from Pexels 
 3. StarWars photos from Pexels
+
+### Code 
+- The developer consulted multiple sites in order to better understand the code they were trying to implement. 
+- The following sites were used on a more regular basis:
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+- [Bootstrap](https://getbootstrap.com/ "Link to BootStrap page")
+
 
 #### Acknowledgements
 
@@ -212,6 +240,7 @@ editor of your choice by following the steps below:
 
 - I received advice and support from
 
-    - **Seun Owonikoko** (my mentor)
+    - I would like to thank my mentor, Seun, for her invaluable help and guidance throughout the process.
     
 
+[Back to top ⇧](#StarWars-Memory-Game)
