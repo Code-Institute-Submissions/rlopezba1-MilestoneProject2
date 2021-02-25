@@ -52,7 +52,7 @@ User centric Website with HTML, CSS, JavaScript, Bootstrap, Sweetalert (JS libra
 Live version : [View the live project here](https://rlopezba1.github.io/MilestoneProject2/)
 
 
-## UX Strategy
+## UX 
 
 - Game Objective
 
