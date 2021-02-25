@@ -62,7 +62,7 @@ function gameFinished() {
 	clearInterval(add);
 	swal({
 			title: "You Win!!",
-			text: "Do you want to try again? I am sure you will be faster!",
+			text: "Do you want to try again?",
 			icon: "warning",
 			buttons: true,
 			dangerMode: true,
@@ -84,7 +84,8 @@ function gameFinished() {
 				setInterval(function () {
                     pauseGame();
                     imperialMarch.pause();
-				}, 3000);
+                }, 3000);
+                
 			}
 		});
 

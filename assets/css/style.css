@@ -4,6 +4,8 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   background-attachment: fixed;   
+  font-family: 'Girassol', cursive;
+
 }
 
  .dark-mode {
@@ -13,6 +15,8 @@ body {
     background-size: cover; /* Resize the background image to cover the entire container */
     background-attachment: fixed; 
     }
+
+ 
 /* By setting display: flex to the body and margin: auto to the .memory-game container, it will be centered both vertically and horizontally.
 .memory-game will also be a flex-container. 
  By setting flex-wrap to wrap, flex-items wrap along multiple lines, accordingly to their size. */
@@ -106,17 +110,13 @@ In order to position .memory-card children, I added position: relative so I can 
 @media screen and (max-width: 576px) { 
      #input{
         height: 100%;
-        width: 50%;
-             
+        width: 50%;         
     }
 
     li button {
         height: 100%;
-        width: 50%;
-        
-        
+        width: 50%;        
     }
-
     
     .memory-game {
         height: 550px;
@@ -135,12 +135,12 @@ In order to position .memory-card children, I added position: relative so I can 
     #input{
         height: 100%;
         width: 75%;
+        float: right;
     }
 
     button {
         height: 100%;
-        padding: 0%;
-        
+        padding: 0%;        
     }
 
     .memory-game {
@@ -180,8 +180,7 @@ In order to position .memory-card children, I added position: relative so I can 
     
  .memory-card{
      width: calc(25% - 10px );
-    height: calc(35% - 10px);
-    
+    height: calc(35% - 10px);    
  }
 
  .front-face,
