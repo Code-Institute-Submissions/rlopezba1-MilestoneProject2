@@ -174,7 +174,7 @@ function start() {
 
 
 		} else {
-			swal("GAME OVER!", "You run out of time! the game will start again automatically", "error", {
+			swal("GAME OVER!", "You run out of time!", "error", {
 				button: false,
 			});
 			setInterval(function () {
