@@ -7,11 +7,12 @@ let winAudio = new Audio('assets/audio/02 Main Title_Rebel Blockade Runner.mp3')
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let matches = 0
-var i = 100;
-var input = document.getElementById("input"),
+let matches = 0;
+let i = 100;
+let input = document.getElementById("input"),
 	add;
-
+let imperialMarch = document.getElementById("music");
+let iconMusic = document.getElementById("icon");
 
 function flipCard() {
 
@@ -70,8 +71,8 @@ function gameFinished() {
 		.then((willPlay) => {
 			if (willPlay) {
 				swal("Good! Go ahead young Jedi!", {
-                    icon: "success",
-                    button: false,
+					icon: "success",
+					button: false,
 				});
 				setInterval(function () {
 					location.reload();
@@ -82,10 +83,10 @@ function gameFinished() {
 					button: true,
 				});
 				setInterval(function () {
-                    pauseGame();
-                    imperialMarch.pause();
-                }, 3000);
-                
+					pauseGame();
+					imperialMarch.pause();
+				}, 3000);
+
 			}
 		});
 
@@ -117,10 +118,10 @@ function unFlipCards() {
 // place the hasFlippedCard = false; and lockBoard = false. 
 
 function resetBoard() {
-    hasFlippedCard= false;
-    lockBoard = false;
-    firstCard = null;
-    secondCard = null;
+	hasFlippedCard = false;
+	lockBoard = false;
+	firstCard = null;
+	secondCard = null;
 }
 
 
@@ -131,7 +132,7 @@ function resetBoard() {
 	cards.forEach(card => {
 		let randomPos = Math.floor(Math.random() * 12);
 		card.style.order = randomPos;
-	})
+	});
 })();
 
 
@@ -140,31 +141,30 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 // This function change the theme to Dark mode when is called 
 function myFunction() {
-	var element = document.body;
+	let element = document.body;
 	element.classList.toggle("dark-mode");
 }
 
 // This function play the music when the button is clickedPlaying music function
 
 function Play() {
-    let imperialMarch = document.getElementById("music");
-    let iconMusic = document.getElementById("icon");
+	// let imperialMarch = document.getElementById("music");
+	// let iconMusic = document.getElementById("icon");
 	if (imperialMarch.paused) {
-        imperialMarch.play();
-        iconMusic.innerHTML = "Music Off"
-           
+		imperialMarch.play();
+		iconMusic.innerHTML = "Music Off";
+
 	} else {
-        imperialMarch.pause();        
-        iconMusic.innerHTML = "Music On"
-    }
+		imperialMarch.pause();
+		iconMusic.innerHTML = "Music On";
+	}
 }
 
 // This function start the timer and progress bar in combination. 
 
 
-
 function start() {
-    //window.location.reload();
+	//window.location.reload();
 	lockBoard = false;
 	add = setInterval(function () {
 		i--;
@@ -188,36 +188,32 @@ function start() {
 
 // Function that lock the cards when the game is paused and stop the time
 
-    function pauseGame() {
-        clearInterval(add);
-        lockBoard = true;
-    }
+function pauseGame() {
+	clearInterval(add);
+	lockBoard = true;
+}
 
-    function uniqueButton(){
-        let unique = document.getElementById("unique");
-        if (unique.innerHTML === "Pause Time") {
-            unique.innerHTML = "Start Time";
-            pauseGame();
-        } else {
-            unique.innerHTML = "Pause Time";
-            start();
-        }
-    }
+function uniqueButton() {
+	let unique = document.getElementById("unique");
+	if (unique.innerHTML === "Pause Time") {
+		unique.innerHTML = "Start Time";
+		pauseGame();
+	} else {
+		unique.innerHTML = "Pause Time";
+		start();
+	}
+}
 
-function reStart(){
-   start();
-   $("#reStart").click(function(){
-    location.reload();
-    });
+function reStart() {
+	start();
+	$("#reStart").click(function () {
+		location.reload();
+	});
+	let stopButton = document.getElementById("reStart");
+	if (stopButton.innerHTML === "Finish Game") {
+		stopButton.innerHTML = "Start Game";
 
-    let stopButton = document.getElementById("reStart");
-        if (stopButton.innerHTML === "Finish Game") {
-            stopButton.innerHTML = "Start Game";
-           
-        } else {
-            stopButton.innerHTML = "Finish Game";
-            
-        }
-
-
+	} else {
+		stopButton.innerHTML = "Finish Game";
+	}
 }

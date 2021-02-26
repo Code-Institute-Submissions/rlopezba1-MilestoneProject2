@@ -16,8 +16,6 @@
 3. [Changes I made throuought the project](#Changes-I-made-throuought-the-project)
 3. [Features](#Features)
     - [Design Features](#Design-Features) 
-    - [Existing Features](#Existing-Features)
-    - [Features to Implement in the future](#Features-to-Implement-in-the-future)
     - [Skeleleton](#Skeleleton)
 4. [Issues and Bugs](#Issues-and-Bugs)
 5. [Technologies Used](#Technologies-Used)
@@ -30,7 +28,6 @@
      - [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
      - [Creating a Clone](#Creating-a-Clone)
 8. [Credits](#Credits)
-     - [Content](#Content)
      - [Media](#Media)
      - [Code](#Code)
 9. [Acknowledgements](#Acknowledgements)
@@ -54,7 +51,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
 ## UX 
 
-- Game Objective
+### Game Objective
 
     - This game is for anyone who wants to entertain himself and have a good time. In particular, Star Wars lovers will enjoy 
         this game as it will remind them the saga they love so much.
@@ -72,7 +69,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
     - The next two buttons allow us to activate and deactivate the music, which allows us to create a greater atmosphere of Star Wars.
 
-- User Objective
+### User Objective
 
     - Play a game that is fun, dynamic, entertaining, for all types of users, that is not difficult to play or understand.
 
@@ -80,18 +77,25 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
     - It has to be exciting, and we getting this with the time bar telling us the time left.
 
-- Project goals
+### Project goals
     - Create a fun, dynamic and entertaining game for the user
     - Create a relaxed image, quickly access the game and be able to interact easily.
 
-- User stories
+### User stories
 
     1. As a site visitor, I want to start playing as soon as possible.
     2. As a site visitor, I want to learn how to play.
     3. As a site visitor, I want to see how long I have left to finish
     4. As a site visitor, I want to put music and change the background
 
-- Design
+### Design
+- Strategy Plane My strategy for this game was to offer a fun gaming experience that allows the player to practice their memory skills. 
+    It is based on the Star Wars saga, so that those fans of the saga can enjoy it even more.
+
+- Scope plane The main feature was going to be the memory game itself along with some other features, such as the possibility of giving a darker background, 
+a timer, optional sound effects, which allows to be relaxed or to recreate the atmosphere of the movie.
+
+- Structure plan When the key features were established, the structure plan was quite simple. I was going to have a single full-featured page and get a good balance.
 
     - Colors:
         - A palette of three colors to try to give an elegant and relaxed image, where each color complements each other.
@@ -103,6 +107,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
         - <span style="color: #f8f9fa">#f8f9fa It's the music button color</span>  
 
     - Typography:
+        - I have used the Girassol font because it is very similar to the Star Wars font.
     
 [Back to top ⇧](#StarWars-Memory-Game)
 
@@ -112,6 +117,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 - So I opted to place all the options in a navigation bar so that small devices can play perfectly as the navigation bar collapses, and it is up to the user to see them or not.
     
 ## Features
+### Design Features
 
 - I want the website to be original, fun, easy to use.
   
@@ -124,8 +130,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 - Research has been carried out on other Internet pages, but this design, with these colors, images, structure, and fonts,
    it is completely original.
 
-
-## Skeleleton
+### Skeleleton
 - [Wireframe in Design](https://github.com/rlopezba1/MilestoneProject1/blob/main/NewProject1.pdf) 
    using Balsamiq in large, medium and small devices sizes.
    
@@ -199,9 +204,7 @@ editor of your choice by following the steps below:
 
 ## Credits
 
-### Content
-- All content was written by the developer.
-	
+
 
 ### Media
 
