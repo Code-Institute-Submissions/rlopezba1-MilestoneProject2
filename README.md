@@ -56,37 +56,37 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 - This game is for anyone who wants to entertain himself and have a good time. In particular, Star Wars lovers will enjoy 
         this game as it will remind them the saga they love so much.
 
-    - The game is presented without too many preambles, directly to start playing. 
+- The game is presented without too many preambles, directly to start playing. 
     The first thing every user sees are the cards with the image of Star Wars, as is the theme of the game.
 
-    - Most people know how to play this game, but just in case, in the upper left corner, it is specified that it is a star wars memory game.
+- Most people know how to play this game, but just in case, in the upper left corner, it is specified that it is a star wars memory game.
 
-    - On its left side, we find the first button, which when clicked, explains the way to play and the objective of the game, which can help those who do not know how to play.
+- On its left side, we find the first button, which when clicked, explains the way to play and the objective of the game, which can help those who do not know how to play.
 
-    - The next button allows us to change the background of the game to go deeper into the galactic atmosphere, or to return to the traditional blue sky background.
+- The next button allows us to change the background of the game to go deeper into the galactic atmosphere, or to return to the traditional blue sky background.
 
-    - The next button allows us to start the game again.
+- The next button allows us to start the game again.
 
-    - The next two buttons allow us to activate and deactivate the music, which allows us to create a greater atmosphere of Star Wars.
+- The next two buttons allow us to activate and deactivate the music, which allows us to create a greater atmosphere of Star Wars.
 
 ### User Objective
 
 - Play a game that is fun, dynamic, entertaining, for all types of users, that is not difficult to play or understand.
 
-    - Allows me to change and the interact(background, music, ...).
+- Allows me to change and the interact(background, music, ...).
 
-    - It has to be exciting, and we getting this with the time bar telling us the time left.
+- It has to be exciting, and we getting this with the time bar telling us the time left.
 
 ### Project goals
-    - Create a fun, dynamic and entertaining game for the user
-    - Create a relaxed image, quickly access the game and be able to interact easily.
+- Create a fun, dynamic and entertaining game for the user
+- Create a relaxed image, quickly access the game and be able to interact easily.
 
 ### User stories
 
 1. As a site visitor, I want to start playing as soon as possible.
-    2. As a site visitor, I want to learn how to play.
-    3. As a site visitor, I want to see how long I have left to finish
-    4. As a site visitor, I want to put music and change the background
+2. As a site visitor, I want to learn how to play.
+3. As a site visitor, I want to see how long I have left to finish
+4. As a site visitor, I want to put music and change the background
 
 ### Design
 - Strategy Plane My strategy for this game was to offer a fun gaming experience that allows the player to practice their memory skills. 
