@@ -27,8 +27,6 @@
 ## Manual Testing 
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - The navbar was tested to collapse at the correct breakpoint.
-- The form and the modal were both tested for validation of inputted data and that the user is forwarded 
-to the response page once submitted.
 - All buttons and nav links were checked for correct forwarding address.
 
 ## Manual testing
