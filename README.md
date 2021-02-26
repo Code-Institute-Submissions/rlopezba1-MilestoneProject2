@@ -165,6 +165,9 @@ All of these problems have taken me a long time but I have enjoyed solving them.
 7. [Microsoft Photo Editor](https://www.microsoft.com/en-us/windows/photo-movie-editor) was used to resizing images and editing photos for the website.
 8. [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
 
+## Testing
+- [Click here to view the testing for this project!](./testing.md)
+
 ## Deployment
 ### Forking the Repository
 The site was developed in GitPod and pushed to the following remote GitHub repository - [REPO](https://github.com/rlopezba1/MilestoneProject2)
