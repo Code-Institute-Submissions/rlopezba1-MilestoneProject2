@@ -166,7 +166,7 @@ All of these problems have taken me a long time but I have enjoyed solving them.
 8. [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
 
 ## Testing
-- [Click here to view the testing for this project!](./testing.md)
+- [Click here to view the testing for this project!](/testing.md)
 
 ## Deployment
 ### Forking the Repository
