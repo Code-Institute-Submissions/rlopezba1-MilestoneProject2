@@ -53,7 +53,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
 ### Game Objective
 
-    - This game is for anyone who wants to entertain himself and have a good time. In particular, Star Wars lovers will enjoy 
+- This game is for anyone who wants to entertain himself and have a good time. In particular, Star Wars lovers will enjoy 
         this game as it will remind them the saga they love so much.
 
     - The game is presented without too many preambles, directly to start playing. 
@@ -71,7 +71,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
 ### User Objective
 
-    - Play a game that is fun, dynamic, entertaining, for all types of users, that is not difficult to play or understand.
+- Play a game that is fun, dynamic, entertaining, for all types of users, that is not difficult to play or understand.
 
     - Allows me to change and the interact(background, music, ...).
 
@@ -83,7 +83,7 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 
 ### User stories
 
-    1. As a site visitor, I want to start playing as soon as possible.
+1. As a site visitor, I want to start playing as soon as possible.
     2. As a site visitor, I want to learn how to play.
     3. As a site visitor, I want to see how long I have left to finish
     4. As a site visitor, I want to put music and change the background
