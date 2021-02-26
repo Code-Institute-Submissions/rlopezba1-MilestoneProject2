@@ -141,13 +141,23 @@ In order to position .memory-card children, I added position: relative so I can 
 	}
 }
 
+@media screen and (max-width: 672px) {
+	#input {
+		height: 100%;
+		width: 25%;
+	}
+	li button {
+		height: 100%;
+		width: 50%;
+	}
+}
 
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
 	#input {
 		height: 100%;
-		width: 75%;
+		width: 50%;
 		float: right;
 	}
 	button {
