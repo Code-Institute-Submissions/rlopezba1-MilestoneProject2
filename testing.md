@@ -22,7 +22,7 @@
         - 18 warnings because of using ES6 features
         - 2 Undefined variable
         - 4 Unused variables
-- [Freeformatter](https://www.freeformatter.com/)
+- [Freeformatter](https://www.freeformatter.com/) to make the code more organized.
 
 ## Manual Testing 
 - A large amount of testing was done to ensure that all pages were linking correctly.

@@ -22,7 +22,7 @@
      - [Languages Used](#Languages-Used)
      - [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
 6. [Testing](#Testing)
-     - [Testing.md](TESTING.md)
+     - [Testing.md](/testing.md)
 7. [Deployment](#Deployment)
      - [Forking the Repository](#Forking-the-Repository)
      - [Deploying on GitHub Pages](#Deploying-on-GitHub-Pages)
@@ -59,34 +59,38 @@ Live version : [View the live project here](https://rlopezba1.github.io/Mileston
 - The game is presented without too many preambles, directly to start playing. 
     The first thing every user sees are the cards with the image of Star Wars, as is the theme of the game.
 
-- Most people know how to play this game, but just in case, in the upper left corner, it is specified that it is a star wars memory game.
+- Most people know how to play this game, but just in case, in the upper left corner, it is specified that it is a Star Wars memory game.
 
 - On its left side, we find the first button, which when clicked, explains the way to play and the objective of the game, which can help those who do not know how to play.
 
 - The next button allows us to change the background of the game to go deeper into the galactic atmosphere, or to return to the traditional blue sky background.
 
-- The next button allows us to start the game again.
-
 - The next two buttons allow us to activate and deactivate the music, which allows us to create a greater atmosphere of Star Wars.
+
+- Next we can find a Timer that tell us how many seconds are we playing 
+
+- The next button allow us to pause and start the Timer and the game.
+
+- The next button allows us to start and finish the game again.
 
 ### User Objective
 
 - Play a game that is fun, dynamic, entertaining, for all types of users, that is not difficult to play or understand.
 
-- Allows me to change and the interact(background, music, ...).
+- Allows me to change and the interact (background, music, ...), I can do something else that just play the game to make it a grateful experience.
 
 - It has to be exciting, and we getting this with the time bar telling us the time left.
 
 ### Project goals
 - Create a fun, dynamic and entertaining game for the user
-- Create a relaxed image, quickly access the game and be able to interact easily.
+- Create a relaxed image, a quickly access to the game and be able to interact easily.
 
 ### User stories
 
 1. As a site visitor, I want to start playing as soon as possible.
 2. As a site visitor, I want to learn how to play.
-3. As a site visitor, I want to see how long I have left to finish
-4. As a site visitor, I want to put music and change the background
+3. As a site visitor, I want to see how much time I have left to finish the game.
+4. As a site visitor, I want to put music and change the background.
 
 ### Design
 - Strategy Plane My strategy for this game was to offer a fun gaming experience that allows the player to practice their memory skills. 
@@ -98,8 +102,8 @@ a timer, optional sound effects, which allows to be relaxed or to recreate the a
 - Structure plan When the key features were established, the structure plan was quite simple. I was going to have a single full-featured page and get a good balance.
 
     - Colors:
-        - A palette of three colors to try to give an elegant and relaxed image, where each color complements each other.
-        - Color palette - Three main colors complement the design of the site. These are shown below: 
+        - A palette of few colors to try to give an elegant and relaxed image, where each color complements each other.
+        - Color palette - Few main colors complement the design of the site. These are shown below: 
         - <span style="color: #1c7ccc">#1c7ccc It's the background color for the cards</span>
         - <span style="color: #007bff">#007bff It's info button color</span>
         - <span style="color: #28a745">#28a745 It's dark/light button color</span>
@@ -121,7 +125,8 @@ a timer, optional sound effects, which allows to be relaxed or to recreate the a
 
 - I want the website to be original, fun, easy to use.
   
-- The webpage has a simple structure to facilitate its function. At the top is a fixed response navigation bar with buttons that will give the user different options to modify the image and to know the operation of the game, as well as to start the game again.
+- The webpage has a simple structure to facilitate its function. At the top is a fixed response navigation bar with buttons that will give the user different 
+options to background and to know the operation of the game, as well as to start the game again.
 
 - The user experience should be easy to navigate and have a good time.
 
@@ -131,7 +136,7 @@ a timer, optional sound effects, which allows to be relaxed or to recreate the a
    it is completely original.
 
 ### Skeleleton
-- [Wireframe in Design](https://github.com/rlopezba1/MilestoneProject1/blob/main/NewProject1.pdf) 
+- [Wireframe in Design](https://github.com/rlopezba1/MilestoneProject2/assets/wireframes/milestoneProject2.pdf) 
    using Balsamiq in large, medium and small devices sizes.
    
 - Responsive Design
@@ -164,6 +169,7 @@ All of these problems have taken me a long time but I have enjoyed solving them.
 6. [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
 7. [Microsoft Photo Editor](https://www.microsoft.com/en-us/windows/photo-movie-editor) was used to resizing images and editing photos for the website.
 8. [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
+9. [Sweetalert (JS library)](https://sweetalert.js.org/docs/) was used to create a window pop up when the game is finish.
 
 ## Testing
 - [Click here to view the testing for this project!](/testing.md)
@@ -186,7 +192,7 @@ This site is hosted using GitHub pages, deployed directly from the master branch
 The following steps were taken to complete the hosting process.
 
 - Log into GitHub.
-- Choose the relevant repository [StarWars Memory Game](https://github.com/rlopezba1/MilestoneProject)
+- Choose the relevant repository [StarWars Memory Game](https://github.com/rlopezba1/MilestoneProject2/)
 - Go to settings.
 - Scroll down to GitHub Pages section.
 - Select as a source master branch.
@@ -218,9 +224,9 @@ editor of your choice by following the steps below:
 ### Code 
 - The developer consulted multiple sites in order to better understand the code they were trying to implement. 
 - The following sites were used on a more regular basis:
-- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
-- [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
-- [Bootstrap](https://getbootstrap.com/ "Link to BootStrap page")
+    - [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow page")
+    - [W3Schools](https://www.w3schools.com/ "Link to W3Schools page")
+    - [Bootstrap](https://getbootstrap.com/ "Link to BootStrap page")
 
 
 #### Acknowledgements
