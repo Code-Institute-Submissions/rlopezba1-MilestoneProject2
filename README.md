@@ -136,13 +136,21 @@ options to background and to know the operation of the game, as well as to start
    it is completely original.
 
 ### Skeleleton
-- [Wireframe in Design](./assets/wireframes/milestoneProject2.pdf) 
+- ![Wireframe in Design](./assets/wireframes/milestoneProject2.pdf) 
    using Balsamiq in large, medium and small devices sizes.
    
 - Responsive Design
     - I have changed the initial design, as I think it is important to give the maximum importance to the game, and therefore the cards should be as large as possible 
     on the smallest devices.
     - The information of the game, the change of theme, or the activation of the music are secondary, so on small devices, they are hidden and it is up to the user if they want to use them or not.
+
+![Desktop Design View](./assets/documentation/wireframes/desktopView.png)
+
+![Tablet Design View](./assets/documentation/wireframes/tabletView.png)
+
+![Desktop Design View](./assets/documentation/wireframes/smallDeviceView.png)
+
+![Desktop Design View](./assets/documentation/wireframes/smallDeviceViewButtons.png)
 
 ## Issues and Bugs
 The text on the main page did not look good on some devices. 
@@ -210,8 +218,6 @@ editor of your choice by following the steps below:
 - To cut ties with this GitHub repository, type git remote rm origin into the terminal.
 
 [Back to top ⇧](#StarWars-Memory-Game)
-
-## Credits
 
 
 

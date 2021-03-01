@@ -115,55 +115,45 @@ In order to position .memory-card children, I added position: relative so I can 
 }
 
 #input {
-	width: 35%;
+    width: 35%;        
 }
 
 
 /* Small devices (landscape phones, 576px and up) */
 
 @media screen and (max-width: 576px) {
-	#input {
-		height: 100%;
-		width: 50%;
-	}
-	li button {
-		height: 100%;
-		width: 50%;
-	}
+	#input {		
+		width: 100%;
+	} 
+	
 	.memory-game {
 		height: 550px;
 		margin-top: 5%;
 	}
 	.memory-card {
 		width: calc(25% - 10px);
-		height: calc(20% - 0px);
-		/* margin-top: 40px; */
+		height: calc(20% - 0px);		
 	}
 }
 
-@media screen and (max-width: 672px) {
+ @media screen and (max-width: 768px) {
 	#input {
-		height: 100%;
-		width: 25%;
-	}
-	li button {
-		height: 100%;
-		width: 50%;
-	}
-}
+		width: 100%;
+	}	
+} 
 
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-	#input {
-		height: 100%;
-		width: 50%;
-		float: right;
+	#input {		
+		width: 100%;
+        height: 100%;
+        float: right;
 	}
-	button {
+	 button {
 		height: 100%;
 		padding: 0%;
-	}
+	} 
 	.memory-game {
 		height: 600px;
 		margin-top: 5%;
@@ -180,7 +170,8 @@ In order to position .memory-card children, I added position: relative so I can 
 @media (min-width: 992px) {
 	#input {
 		height: 100%;
-		width: 50%;
+        width: 50%;
+        float: right; 
 	}
 	.memory-game {
 		height: 700px;

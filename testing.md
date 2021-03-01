@@ -29,6 +29,8 @@
 - The navbar was tested to collapse at the correct breakpoint.
 - All buttons and nav links were checked for correct forwarding address.
 
+- ![website performance](./assets/documentation/testing/performance.png)
+
 ## Manual testing
 All manual tests were done in the following browsers:
 - Firefox

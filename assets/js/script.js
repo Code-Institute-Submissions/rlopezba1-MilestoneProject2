@@ -1,3 +1,4 @@
+// Some code is from external source as free code camp (more info in readme file)
 // To flip the card when clicked, a class flip will be added to the element.
 // all memory - card elements with document.querySelectorAll, 
 
@@ -9,8 +10,8 @@ let lockBoard = false;
 let firstCard, secondCard;
 let matches = 0;
 let i = 100;
-let input = document.getElementById("input"),
-	add;
+let input = document.getElementById("input");
+let add;
 let imperialMarch = document.getElementById("music");
 let iconMusic = document.getElementById("icon");
 
@@ -147,9 +148,7 @@ function myFunction() {
 
 // This function play the music when the button is clickedPlaying music function
 
-function Play() {
-	// let imperialMarch = document.getElementById("music");
-	// let iconMusic = document.getElementById("icon");
+function Play() {	
 	if (imperialMarch.paused) {
 		imperialMarch.play();
 		iconMusic.innerHTML = "Music Off";
@@ -163,8 +162,7 @@ function Play() {
 // This function start the timer and progress bar in combination. 
 
 
-function start() {
-	//window.location.reload();
+function start() {	
 	lockBoard = false;
 	add = setInterval(function () {
 		i--;
