@@ -136,7 +136,7 @@ options to background and to know the operation of the game, as well as to start
    it is completely original.
 
 ### Skeleleton
-- ![Wireframe in Design](./assets/wireframes/milestoneProject2.pdf) 
+- [Wireframe in Design](./assets/wireframes/milestoneProject2.pdf) 
    using Balsamiq in large, medium and small devices sizes.
    
 - Responsive Design
