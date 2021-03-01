@@ -59,7 +59,7 @@ function checkForMatch() {
 
 // The library sweetalert has been used to create alert windows at the end of the game
 function gameFinished() {
-
+    imperialMarch.pause();
 	winAudio.play();
 	clearInterval(add);
 	swal({
@@ -84,8 +84,7 @@ function gameFinished() {
 					button: true,
 				});
 				setInterval(function () {
-					pauseGame();
-					imperialMarch.pause();
+					pauseGame();					
 				}, 3000);
 
 			}

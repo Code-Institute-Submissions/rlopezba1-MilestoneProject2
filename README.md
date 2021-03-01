@@ -135,7 +135,7 @@ options to background and to know the operation of the game, as well as to start
 - Research has been carried out on other Internet pages, but this design, with these colors, images, structure, and fonts,
    it is completely original.
 
-### Skeleleton
+### Skeleton
 - [Wireframe in Design](./assets/documentation/wireframes/milestoneProject2.pdf) 
    using Balsamiq in large, medium and small devices sizes.
    

@@ -28,6 +28,7 @@
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - The navbar was tested to collapse at the correct breakpoint.
 - All buttons and nav links were checked for correct forwarding address.
+- The lighthouse tool has been used to know the behavior of the web.
 
 - ![website performance](./assets/documentation/testing/performance.png)
 
