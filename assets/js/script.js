@@ -136,9 +136,6 @@ function resetBoard() {
 })();
 
 
-// cards.forEach(card => card.addEventListener('click', flipCard));
-
-
 // This function change the theme to Dark mode when is called 
 function myFunction() {
 	let element = document.body;
