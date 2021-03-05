@@ -136,7 +136,7 @@ function resetBoard() {
 })();
 
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+// cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 // This function change the theme to Dark mode when is called 
@@ -202,6 +202,8 @@ function uniqueButton() {
 }
 
 function reStart() {
+    cards.forEach(card => card.addEventListener('click', flipCard));
+
 	start();
 	$("#reStart").click(function () {
 		location.reload();
