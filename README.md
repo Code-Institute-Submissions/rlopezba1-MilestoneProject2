@@ -169,7 +169,7 @@ All of these problems have taken me a long time but I have enjoyed solving them.
 - JavaScript
 ### Frameworks, Libraries & Programs Used
 1. [Bootstrap 4](https://getbootstrap.com/) was used to assist with the responsiveness and styling of the website.
-2. [Google Fonts](https://fonts.google.com/) were used to import the 'Roboto' font into the style.css file
+2. [Google Fonts](https://fonts.google.com/) were used to import the 'Girassol' font into the style.css file
          which is used on all pages throughout the project.
 3. [Font Awesome](https://fontawesome.com/) was used on all pages throughout the website to add icons for UX purposes.
 4. [JQuery](https://jquery.com/) came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
