@@ -4,7 +4,7 @@
 
 const cards = document.querySelectorAll('.memory-card');
 
-let winAudio = new Audio('assets/audio/02 Main Title_Rebel Blockade Runner.mp3');
+let winAudio = new Audio('assets/audio/main_title_rebel_blockade_runner.mp3');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;

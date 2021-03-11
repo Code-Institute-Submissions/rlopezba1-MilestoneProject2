@@ -1,5 +1,5 @@
 body {
-	background-image: url("../img/lightTheme2.jpg");
+	background-image: url("../img/light_theme2.jpg");
 	background-repeat: no-repeat;
 	/* Do not repeat the image */
 	background-size: cover;
@@ -9,7 +9,7 @@ body {
 }
 
 .dark-mode {
-	background-image: url("../img/darkTheme.jpg");
+	background-image: url("../img/dark_theme.jpg");
 	background-position: center;
 	/* Center the image */
 	background-repeat: no-repeat;
